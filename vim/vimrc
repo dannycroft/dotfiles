@@ -1,0 +1,64 @@
+set nocompatible             
+filetype off 
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'kien/ctrlp.vim'
+Bundle 'vim-scripts/Align'
+Bundle 'Raimondi/delimitMate'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/nerdtree'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'pangloss/vim-javascript'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'scrooloose/syntastic'
+Bundle 'Raimondi/delimitMate'
+Bundle 'bling/vim-airline'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'amirh/HTML-AutoCloseTag'
+Bundle 'tpope/vim-commentary'
+
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'othree/html5-syntax.vim'
+Bundle 'tpope/vim-markdown'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'othree/javascript-libraries-syntax.vim'
+Bundle 'jiangmiao/simple-javascript-indenter'
+Bundle 'tpope/vim-haml'
+
+set shiftwidth=2
+set t_Co=256
+set tabstop=2
+set number
+set laststatus=2
+set hlsearch
+set incsearch
+set nobackup
+set ruler
+set shiftwidth=2
+set smarttab
+set textwidth=72
+set visualbell t_vb=
+
+set winwidth=84
+set winheight=5
+set winminheight=5
+set winheight=999
+
+let g:syntastic_check_on_open=1
+let g:airline_theme='simple'
+let g:airline_powerline_fonts=1
+
+syntax on 
+colorscheme solarized
+set background=dark
+set guioptions-=T
+set autoread
+
+highlight LineNr ctermfg=grey ctermbg=black
+
+map <C-n> :NERDTreeToggle<cr>
+map <leader>h :nohlsearch<cr>
