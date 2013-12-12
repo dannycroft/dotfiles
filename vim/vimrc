@@ -28,18 +28,23 @@ Bundle 'jiangmiao/simple-javascript-indenter'
 Bundle 'tpope/vim-haml'
 
 set shiftwidth=2
-set t_Co=256
-set tabstop=2
 set number
 set laststatus=2
 set hlsearch
 set incsearch
 set nobackup
 set ruler
-set shiftwidth=2
-set smarttab
-set textwidth=72
+set textwidth=80
 set visualbell t_vb=
+set t_Co=16
+
+set listchars=tab:▸\ ,eol:¬
+nmap <leader>l :set list!<CR>
+
+set autoindent
+set noexpandtab
+set tabstop=4
+set shiftwidth=4
 
 set winwidth=84
 set winheight=5
@@ -47,8 +52,12 @@ set winminheight=5
 set winheight=999
 
 let g:syntastic_check_on_open=1
-let g:airline_theme='simple'
+let g:airline_theme='luna'
 let g:airline_powerline_fonts=1
+let g:solarized_termcolors=16
+
+filetype plugin indent on
+set autoindent
 
 syntax on 
 colorscheme solarized
@@ -56,7 +65,10 @@ set background=dark
 set guioptions-=T
 set autoread
 
-highlight LineNr ctermfg=grey ctermbg=black
+set cursorline
+highlight CursorLine guibg=#F1F5FA
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
 
 map <C-n> :NERDTreeToggle<cr>
 map <leader>h :nohlsearch<cr>
