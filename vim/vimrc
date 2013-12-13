@@ -39,7 +39,6 @@ set visualbell t_vb=
 set t_Co=16
 
 set listchars=tab:▸\ ,eol:¬
-nmap <leader>l :set list!<CR>
 
 set autoindent
 set noexpandtab
@@ -66,9 +65,18 @@ set guioptions-=T
 set autoread
 
 set cursorline
-highlight CursorLine guibg=#F1F5FA
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
 map <C-n> :NERDTreeToggle<cr>
 map <leader>h :nohlsearch<cr>
+map <leader>l :set list!<cr>
+
+fun! <SID>StripTrailingWhitespaces()
+	let l = line(".")
+	let c = col(".")
+	%s/\s\+$//e
+	call cursor(l, c)
+endfun
+
+autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
