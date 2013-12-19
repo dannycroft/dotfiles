@@ -46,6 +46,7 @@ set autoindent
 set noexpandtab
 set tabstop=4
 set shiftwidth=4
+set pastetoggle=<F2>
 
 set winwidth=84
 set winheight=5
