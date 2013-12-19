@@ -1,5 +1,5 @@
-set nocompatible             
-filetype off 
+set nocompatible
+filetype off
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -26,6 +26,8 @@ Bundle 'jelera/vim-javascript-syntax'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'jiangmiao/simple-javascript-indenter'
 Bundle 'tpope/vim-haml'
+Bundle 'maksimr/vim-jsbeautify'
+Bundle 'einars/js-beautify'
 
 set shiftwidth=2
 set number
@@ -80,3 +82,8 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 
 autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
+map <c-f> :call JsBeautify()<cr>
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
