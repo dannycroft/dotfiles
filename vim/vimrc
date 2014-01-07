@@ -10,7 +10,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'tpope/vim-sensible'
 Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltogvim-powerline'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'pangloss/vim-javascript'
