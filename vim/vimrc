@@ -1,4 +1,6 @@
 set nocompatible
+set t_Co=256
+
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
@@ -14,10 +16,10 @@ Bundle 'jelera/vim-javascript-syntax'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'docunext/closetag.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'altercation/vim-colors-solarized'
 
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'othree/html5-syntax.vim'
@@ -38,7 +40,6 @@ set nobackup
 set ruler
 set textwidth=80
 set visualbell t_vb=
-set t_Co=16
 
 set listchars=tab:▸\ ,eol:¬
 
@@ -58,15 +59,14 @@ set winheight=999
 let g:syntastic_check_on_open=1
 let g:airline_theme='luna'
 let g:airline_powerline_fonts=1
-let g:solarized_termcolors=16
 
 filetype plugin indent on
 set autoindent
 
-syntax on
-colorscheme solarized
+syntax enable
 set background=dark
-set autoread
+colorscheme solarized
+
 
 set cursorline
 autocmd WinEnter * setlocal cursorline
