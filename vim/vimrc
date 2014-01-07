@@ -50,6 +50,7 @@ set shiftwidth=4
 set pastetoggle=<F2>
 set exrc
 set secure
+set autoread
 
 set winwidth=84
 set winheight=5
