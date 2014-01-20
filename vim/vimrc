@@ -20,7 +20,8 @@ Bundle 'docunext/closetag.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'altercation/vim-colors-solarized'
-
+Bundle 'benmills/vimux'
+Bundle 'tpope/vim-surround'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'othree/html5-syntax.vim'
 Bundle 'tpope/vim-markdown'
@@ -94,3 +95,9 @@ map <c-f> :call JsBeautify()<cr>
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+map rp :VimuxPromptCommand
+map rl :VimuxRunCommand
+map ri :VimuxInspectRunner
+map rx :VimuxClosePanes
+map rs :VimuxInterruptRunner
