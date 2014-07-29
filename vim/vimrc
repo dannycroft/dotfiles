@@ -4,34 +4,34 @@ set t_Co=256
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Bundle 'gmarik/Vundle.vim'
 
-Bundle 'tpope/vim-sensible'
+Bundle 'sjl/badwolf'
 Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'pangloss/vim-javascript'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
 Bundle 'docunext/closetag.vim'
-Bundle 'Raimondi/delimitMate'
+Bundle 'othree/html5.vim'
+Bundle 'othree/javascript-libraries-syntax.vim'
+Bundle 'jelera/vim-javascript-syntax'
 Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'sjl/badwolf'
+Bundle 'hail2u/vim-css3-syntax'
 Bundle 'benmills/vimux'
 Bundle 'tpope/vim-surround'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'othree/html5-syntax.vim'
-Bundle 'othree/html5.vim'
 Bundle 'tpope/vim-markdown'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'othree/javascript-libraries-syntax.vim'
-Bundle 'jiangmiao/simple-javascript-indenter'
+Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-fugitive'
+Bundle 'jiangmiao/simple-javascript-indenter'
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'einars/js-beautify'
+
+call vundle#end()
+filetype plugin on
 
 set shiftwidth=2
 set number
@@ -58,11 +58,12 @@ set winheight=5
 set winminheight=5
 set winheight=999
 
+set cpoptions+=$
+
 let g:syntastic_check_on_open=1
 let g:airline_theme='luna'
 let g:airline_powerline_fonts=1
 
-filetype plugin indent on
 set autoindent
 
 syntax enable
