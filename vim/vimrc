@@ -3,7 +3,7 @@ set t_Co=256
 
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Bundle 'gmarik/Vundle.vim'
@@ -53,10 +53,10 @@ set exrc
 set secure
 set autoread
 
-set winwidth=84
-set winheight=5
-set winminheight=5
-set winheight=999
+"set winwidth=84
+"set winheight=5
+"set winminheight=5
+"set winheight=999
 
 set cpoptions+=$
 
