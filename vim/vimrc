@@ -53,6 +53,8 @@ set exrc
 set secure
 set autoread
 
+let NERDTreeShowHidden=1
+
 "set winwidth=84
 "set winheight=5
 "set winminheight=5
