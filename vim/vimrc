@@ -33,7 +33,6 @@ Bundle 'einars/js-beautify'
 call vundle#end()
 filetype plugin on
 
-set shiftwidth=2
 set number
 set laststatus=2
 set hlsearch
@@ -41,19 +40,21 @@ set incsearch
 set nobackup
 set ruler
 set visualbell t_vb=
+set backspace=2
+set textwidth=80
+set colorcolumn=+1
 
-set listchars=tab:▸\ ,eol:¬
+set list listchars=tab:▸\ ,eol:¬
 
 set autoindent
-set noexpandtab
 set tabstop=4
 set shiftwidth=4
+set shiftround
+set expandtab
 set pastetoggle=<F2>
 set exrc
 set secure
 set autoread
-
-let NERDTreeShowHidden=1
 
 "set winwidth=84
 "set winheight=5
@@ -66,8 +67,6 @@ let g:syntastic_check_on_open=1
 let g:airline_theme='luna'
 let g:airline_powerline_fonts=1
 
-set autoindent
-
 syntax enable
 colorscheme badwolf
 
@@ -77,14 +76,16 @@ let g:badwolf_darkgutter=1
 hi Normal ctermbg=NONE
 
 map <C-n> :NERDTreeToggle<cr>
+let NERDTreeShowHidden=1
+
 map <leader>h :nohlsearch<cr>
 map <leader>l :set list!<cr>
 
 fun! <SID>StripTrailingWhitespaces()
-	let l = line(".")
-	let c = col(".")
-	%s/\s\+$//e
-	call cursor(l, c)
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
 endfun
 
 autocmd WinEnter * setlocal cursorline
