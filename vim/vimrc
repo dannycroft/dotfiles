@@ -8,7 +8,8 @@ call vundle#begin()
 
 Bundle 'gmarik/Vundle.vim'
 
-Bundle 'sjl/badwolf'
+Bundle 'editorconfig/editorconfig-vim'
+Bundle 'goatslacker/mango.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
@@ -29,6 +30,11 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'jiangmiao/simple-javascript-indenter'
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'einars/js-beautify'
+Bundle 'claco/jasmine.vim'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'groenewege/vim-less'
 
 call vundle#end()
 filetype plugin on
@@ -47,8 +53,8 @@ set colorcolumn=+1
 set list listchars=tab:▸\ ,eol:¬
 
 set autoindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set shiftround
 set expandtab
 set pastetoggle=<F2>
@@ -56,22 +62,26 @@ set exrc
 set secure
 set autoread
 
-"set winwidth=84
-"set winheight=5
-"set winminheight=5
-"set winheight=999
+set winwidth=84
+set winheight=5
+set winminheight=5
+set winheight=999
 
 set cpoptions+=$
+set backupcopy=yes
 
 let g:syntastic_check_on_open=1
 let g:airline_theme='luna'
 let g:airline_powerline_fonts=1
 
-syntax enable
-colorscheme badwolf
+set background=dark
+syntax on
+colorscheme hemisu
 
 let g:badwolf_css_props_highlight=1
 let g:badwolf_darkgutter=1
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 hi Normal ctermbg=NONE
 
