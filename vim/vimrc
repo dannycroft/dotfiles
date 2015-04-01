@@ -113,3 +113,8 @@ map rl :VimuxRunCommand
 map ri :VimuxInspectRunner
 map rx :VimuxClosePanes
 map rs :VimuxInterruptRunner
+
+:ca WQ wq
+:ca Wq wq
+:ca W w
+:ca Q q
